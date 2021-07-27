@@ -179,6 +179,7 @@ conn.on('chat-update', async (msg) => {
 
         // Video/Gif to Sticker Bergerak (Otomatis)
         if ((isVideo && msg.message.videoMessage.fileLength < 10000000 && !msg.message.imageMessage)) {
+            if (!verify) return bot.reply(from, 'Anda belum melakukan verifikasi, untuk verifikasi ketik !verify', msg)
             stickergif(isQuotedVideo, msg, bot, conn, sender, from)
         }
 

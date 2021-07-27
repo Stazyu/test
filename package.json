@@ -1,0 +1,33 @@
+{
+  "name": "bot-wa",
+  "version": "1.0.0",
+  "description": "Bot Whatsapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wahyuhp0"
+  },
+  "author": "Wahyu HP",
+  "license": "ISC",
+  "dependencies": {
+    "@adiwajshing/baileys": "^3.5.1",
+    "await-exec": "^0.1.2",
+    "axios": "^0.21.1",
+    "cfonts": "^2.9.3",
+    "chalk": "^4.1.1",
+    "cheerio": "^1.0.0-rc.10",
+    "child": "0.0.3",
+    "child_process": "^1.0.2",
+    "file-type": "^16.5.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^4.0.0",
+    "fs": "0.0.1-security",
+    "moment-timezone": "^0.5.33",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2"
+  }
+}

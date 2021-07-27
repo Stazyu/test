@@ -185,11 +185,13 @@ conn.on('chat-update', async (msg) => {
 
         // Sticker to Image (Otomatis)
         if ((!isMedia && isSticker && msg.message.stickerMessage.isAnimated === false)) {
+            if (!verify) return bot.reply(from, 'Anda belum melakukan verifikasi, untuk verifikasi ketik !verify', msg)
             stickertoimg(isQuotedSticker, msg, bot, conn, from)
         }
 
         // Sticker Bergerak to Video (Otomatis)
         if ((!isMedia && isSticker && msg.message.stickerMessage.isAnimated === true)) {
+            if (!verify) return bot.reply(from, 'Anda belum melakukan verifikasi, untuk verifikasi ketik !verify', msg)
             stickergiftomp4(isQuotedSticker, msg, bot, conn, from)
         }
         

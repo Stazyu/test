@@ -230,15 +230,13 @@ conn.on('chat-update', async (msg) => {
 │ Total User yang sudah verifikasi ${verify.length}
 │
 └─「 *STAZ BOT😎* 」`)
-                    // const hasil = mentah.canReceiveMessage ? msg : false
-                    // if (!hasil) return staz.reply(from, 'Nomor WhatsApp tidak valid [ Tidak terdaftar di WhatsApp ]', id) 
+
                     const registersss = ({
                         id: nonye,
                         urlpp: pepe
                     })
                     dbverify.push(registersss)
                     fs.writeFileSync('./lib/database/user/verify.json', JSON.stringify(verify)) // DATABASE
-                    // staz.sendFileFromUrl(from, pepe, 'ppnya.jpg', hasil)
                     bot.sendMediaURL(from, pepe, verif, msg)
                 }
                 break
@@ -248,7 +246,6 @@ conn.on('chat-update', async (msg) => {
                 console.log(msg.key.remoteJid)
                 break;
             case 'exif':
-                // if (!itsMe) return
                 // if (args.length < 1) return amsg.reply(from, `Penggunaan ${prefix}exif nama|author`, msg)
                 // if (!arg.split('|')) return amsg.reply(from, `Penggunaan ${prefix}exif nama|author`, msg)
                 exif.create(arg.split('|')[0], arg.split('|')[1])
